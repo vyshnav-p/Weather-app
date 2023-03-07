@@ -1,5 +1,4 @@
 import Head from 'next/head'
-
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import axios from "axios"
@@ -7,6 +6,7 @@ import {BsSearch}from "react-icons/bs"
 import { use, useState } from 'react'
 import Weather from '@/components/Weather'
 import Loading from '@/components/Loading'
+import {motion} from 'framer-motion'
 
 
 
@@ -62,7 +62,8 @@ const clicked=(e)=>{
     className='object-cover'
    />
 {/*------------search-------------*/}
-   <div className='relative flex justify-between max-w-[350px] items-center md:max-w-[500px] w-full  m-auto pt-4 text-white z-10 '>
+   <div
+    className='relative flex justify-between max-w-[350px] items-center md:max-w-[500px] w-full  m-auto pt-4 text-white z-10 '>
     <form onSubmit={clicked} className='flex justify-between items-center w-full  m-auto p-3 bg-transparent border border-gray-300 text-white rounded-2xl '>
       <div>
         <input onChange={(e)=>{
